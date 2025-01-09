@@ -1,10 +1,5 @@
-import mysql from 'mysql2/promise';
+// lib/prisma.ts
+import { PrismaClient } from '@prisma/client';
 
-const db = mysql.createPool({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'userdetails',
-});
-
-export default db;
+const prisma = new PrismaClient();
+export default prisma;
